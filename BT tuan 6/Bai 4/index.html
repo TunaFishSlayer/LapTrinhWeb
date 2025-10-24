@@ -39,12 +39,20 @@
                     <input type="text" id="bookAuthor" placeholder="Nguyen Van A" required>
 
                     <label for="bookPrice">Price</label>
-                    <input type="text" id="bookPrice" placeholder="$0.00" required>
+                    <input type="number" id="bookPrice" placeholder="$0.00" step="0.01" min="0" required>
+
+                    <label for="bookDescription">Description:</label>
+                    <textarea id="bookDescription" placeholder="A brief description of the book..." rows="4"></textarea>
 
                     <label for="bookImage">Link to Cover Image:</label>
                     <input type="url" id="bookImage" placeholder="http://example.com/image.jpg">
 
-                    <button type="submit">Add Book</button>
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn">Add Book</button>
+                        <button type="button" id="cancelBtn">Cancel</button>
+                    </div>
+                    <p id="errorMsg" style="color:red;"></p>  <!--- hien thi loi neu co -->
+
                 </form>
                 <h2> Our Most Popular Books</h2>
                 <div class="books-list">
