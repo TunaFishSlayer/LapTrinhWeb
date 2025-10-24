@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booky-An Online Book Store</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Booky</h1>
+            <nav> <!--Thanh dieu huong-->
+                <ul>
+                    <li><a href="#home">Home</a></li> 
+                    <li><a href="#about">About Us</a></li> 
+                    <li><a href="#books">Books</a></li> 
+                    <li><a href="#contact">Contact</a></li> 
+                </ul>    
+            </nav>    
+        </header>
+        <main>
+            <section> <!--Gioi thieu ve cua hang sach-->
+                <h2>Your One-Stop Online Book Store</h2>
+                <p>Discover a wide range of books across various genres. Whether you're into fiction, non-fiction, mystery, romance, or science fiction, we have something for every reader.</p>
+                <p>Enjoy exclusive discounts, fast shipping, and a user-friendly shopping experience. Start exploring our collection today!</p>
+            </section>
+            <section>
+                <h2> Our Most Popular Books</h2>
+                <div id="books-list">
+                 <!--Danh sach cac quyen sach noi tieng-->
+                    <article id="book-card">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.0jKsYa7NA4f-atP8k37ipgHaLS?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                        alt="The Great Gatsby Cover">
+                        <h3>"The Great Gatsby" by F. Scott Fitzgerald</h3>
+                        <p> A novel</p>
+                        <span>$10.99</span>
+                    </article>
+                    <article  id="book-card">
+                        <img src="https://cdn.kobo.com/book-images/c9472126-7f96-402d-ba57-5ba4c0f4b238/1200/1200/False/nineteen-eighty-four-1984-george.jpg"
+                         alt="1984 Cover">
+                        <h3>"1984" by George Orwell</h3>
+                        <p> sach hay </p>
+                        <span>$9.99</span>
+                    </article>
+                    <article id="book-card">  
+                        <img src="https://m.media-amazon.com/images/I/81gepf1eMqL._SL1500_.jpg" 
+                        alt="To Kill a Mockingbird Cover">
+                        <h3>"To Kill a Mockingbird" by Harper Lee</h3>
+                        <p> A novel about the</p>
+                        <span>$12.99</span>
+                    </article>
+                    <article id="book-card">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.iXT1k2bLKV6pZLvUPAciCgHaLN?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" 
+                        alt="The Hunger Games Cover">
+                        <h3>"The Hunger Games" by Suzanne Collins</h3>
+                        <p>A novel</p>
+                        <span>$11.99</span>
+                    </article>
+                </div>        
+            </section>    
+            <section>
+                <h2>Form input</h2>
+                <form> <!--Form don gian-->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name here">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email here">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message here"></textarea>
+                    <button type="submit">Subscribe</button>
+                </form>    
+            </section>    
+        </main>
+        <footer>
+            <p>&copy; 2025 Booky by Tuan. All rights reserved.</p>
+        </footer>    
+</html>

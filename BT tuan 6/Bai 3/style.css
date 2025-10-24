@@ -1,0 +1,147 @@
+/* --- Cac mau dung chinh  --- */
+:root {
+    --primary-color: #0b042e;
+    --accent-color: #544997;
+    --accent-hover: #403575;
+    --card-bg: #f0e5e5;
+    --text-light: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+/* Header va Nav */
+header {
+    color: var(--text-light);
+    background-color: var(--primary-color);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+main {
+    /* Them khoang trong the cho header */
+    padding-top: 120px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 20px; 
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Danh sach san pham */
+#books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#book-card {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#book-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+#book-card h3 {
+    text-emphasis: bold;
+}
+
+#book-card span {
+    color: #06f006;
+    font-weight: 600;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    margin-top: 20px;
+    font-size: small;
+}
+
+/*  Responsive  */
+@media (max-width: 600px) {
+    main {
+        padding-top: 220px; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 15px;
+    }
+}
