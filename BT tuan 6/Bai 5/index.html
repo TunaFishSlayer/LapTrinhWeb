@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Booky-An Online Book Store</title>
+    </head>
+    <body>
+        <header>
+            <h1>Welcome to Booky</h1>
+            <nav> <!--Thanh dieu huong-->
+                <ul>
+                    <li><a href="#home">Home</a></li> 
+                    <li><a href="#books">Books</a></li> 
+                    <li><a href="#contact">Contact</a></li> 
+                </ul>    
+            </nav>    
+        </header>
+        <main>
+            <section> <!--Gioi thieu ve cua hang sach-->
+                <h2>Your One-Stop Online Book Store</h2>
+                <p>Discover a wide range of books across various genres. Whether you're into fiction, non-fiction, mystery, romance, or science fiction, we have something for every reader.</p>
+                <p>Enjoy exclusive discounts, fast shipping, and a user-friendly shopping experience. Start exploring our collection today!</p>
+            </section>
+            <section>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search for books"> <button id="searchBtn">Search</button>
+                    <button id="toggleFormBtn">Add More Books</button>
+                </div>
+
+                <form id="addBookForm" class="hidden">
+                    <h3>Add New Book</h3>
+                    <label for="bookTitle">Title:</label>
+                    <input type="text" id="bookTitle" placeholder="The Book..." required>
+
+                    <label for="bookAuthor">Author:</label>
+                    <input type="text" id="bookAuthor" placeholder="Nguyen Van A" required>
+
+                    <label for="bookPrice">Price</label>
+                    <input type="number" id="bookPrice" placeholder="$0.00" step="0.01" min="0" required>
+
+                    <label for="bookDescription">Description:</label>
+                    <textarea id="bookDescription" placeholder="A brief description of the book..." rows="4"></textarea>
+
+                    <label for="bookImage">Link to Cover Image:</label>
+                    <input type="url" id="bookImage" placeholder="http://example.com/image.jpg">
+
+                    <div class="button-group">
+                        <button type="submit" id="submitBtn">Add Book</button>
+                        <button type="button" id="cancelBtn">Cancel</button>
+                    </div>
+                    <p id="errorMsg" style="color:red;"></p>  <!--- hien thi loi neu co -->
+                </form>
+                <h3 id="successMessage" style="color:green;"></h3> <!--- hien thi thanh cong -->
+
+                <h2> Our Most Popular Books</h2>
+                <div class="books-list">
+                 <!--Chuyen sang luu o script-->
+                </div>        
+            </section>      
+        </main>
+        <footer>
+            <p>&copy; 2025 Booky by Tuan. All rights reserved.</p>
+        </footer> 
+    <script src="script.js"></script> 
+    </body>       
+</html>

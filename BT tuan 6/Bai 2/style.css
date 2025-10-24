@@ -46,6 +46,9 @@ nav a {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .book-card {
