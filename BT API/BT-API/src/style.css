@@ -1,0 +1,228 @@
+:root {
+  --primary-color: #3498db;
+  --danger-color: #e74c3c;
+  --success-color: #2ecc71;
+  --text-color: #333;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 250px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-add {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #2980b9;
+}
+
+.btn-delete {
+  background-color: var(--danger-color);
+  color: rgb(252, 251, 251);
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+.btn-edit {
+  background-color: #f1c40f;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.btn-edit:hover {
+  background-color: #d4ac0d;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Modal (Popup) Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Loading Spinner */
+#loader {
+  text-align: center;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    /* Stack the Search Bar and Buttons */
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    input[type="text"] {
+        width: 100%;
+        box-sizing: border-box; 
+    }
+
+    /* Transform Table into Cards */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide the table header row */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    } 
+
+    tr {
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    td {
+       
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
+    }
+
+    td:last-child {
+        border-bottom: none;
+        justify-content: center; 
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    /* Add Labels (ID, Name, Email) automatically */
+    td:nth-of-type(1)::before { content: "ID"; position: absolute; left: 15px; font-weight: bold; }
+    td:nth-of-type(2)::before { content: "Name"; position: absolute; left: 15px; font-weight: bold; }
+    td:nth-of-type(3)::before { content: "Email"; position: absolute; left: 15px; font-weight: bold; }
+    td:nth-of-type(4)::before { content: "Phone"; position: absolute; left: 15px; font-weight: bold; }
+    td:nth-of-type(5)::before { content: "Actions"; position: absolute; left: 15px; font-weight: bold; display: none; } /* Hide 'Actions' label */
+}
